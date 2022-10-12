@@ -1,2 +1,2 @@
 # parkint-control
-API vagas de estacionamentos
+API vagas de estacionamentos.
