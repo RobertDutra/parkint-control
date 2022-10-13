@@ -1,9 +1,15 @@
 package com.api.parkingcontrol.dtos;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
+import java.util.UUID;
 
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class ParkingSpotDto {
+
+    private UUID id;
 
     @NotBlank
     private String parkingSpotNumber;
@@ -16,11 +22,8 @@ public class ParkingSpotDto {
     private String modelCar;
     @NotBlank
     private String responsibleName;
-
     @NotBlank
     private String colorCar;
-
-
     @NotBlank
     private String apartment;
     @NotBlank
@@ -89,4 +92,13 @@ public class ParkingSpotDto {
     public void setBlock(String block) {
         this.block = block;
     }
+
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
+
 }
